@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * @program: sword-to-offer-test
- * @description: 整数除法，题目内容：输入2个 int 型整数，它们进行除法运算并返回商。当发生溢出时，返回最大的整数值。不得使用 ‘*’、‘/’、‘%’。
+ * @description: 整数除法，题目内容：输入2个 int 型整数，它们进行除法运算并返回商。当发生溢出时，返回最大的整数值。不得使用 ‘*’、‘/’、‘%’。该题目位于书中第 1 页
  * @author: Stone
  * @create: 2023-08-17 11:38
  **/
