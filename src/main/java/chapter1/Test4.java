@@ -32,7 +32,18 @@ public class Test4 {
     * @Date: 2023/8/17
     */
     private static int singleNumber(int[] paramArray) {
-        
-        return 0;
+        // 模拟所求值的32位
+        int[] bitSums = new int[32];
+        for (int i = 0; i < 32; i++) {
+            for (int param : paramArray) {
+                // 注意 bitSums 数组的第一位为最高位
+                bitSums[i] += (param >> (31-i)) & 1;
+            }
+        }
+        int result = 0;
+        for (int bitSum : bitSums) {
+            result = (result << 1) + bitSum % 3;
+        }
+        return result;
     }
 }
