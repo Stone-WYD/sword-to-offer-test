@@ -14,7 +14,7 @@ public class Test6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while(true){
-            System.out.print("输入的数组为（数组需要从小到大排序）：");
+            System.out.print("输入的数组为（数组需要从小到大排序，数字用英文逗号隔开）：");
             String inStr = scanner.next();
             String[] inArray = inStr.split(",");
             int[] paramArray = new int[inArray.length];
