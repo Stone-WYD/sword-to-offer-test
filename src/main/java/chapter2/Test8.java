@@ -37,8 +37,7 @@ public class Test8 {
             sum += paramArray[right];
             if (sum >= k){
                 while (sum >= k){
-                    sum -= paramArray[left];
-                    left++;
+                    sum -= paramArray[left++];
                 }
                 int temp = right - left + 2;
                 result = temp < result ? temp : result;
