@@ -42,7 +42,7 @@ public class Test10 {
         Integer sum = 0;
         for (int i = 0; i < paramArray.length; i++) {
             sum += paramArray[i];
-            count += sumToCount.getOrDefault(k - sum, 0);
+            count += sumToCount.getOrDefault(sum - k, 0);
             sumToCount.put(sum, sumToCount.getOrDefault(sum, 0) + 1);
         }
         return count;
