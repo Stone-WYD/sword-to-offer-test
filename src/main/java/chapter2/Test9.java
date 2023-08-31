@@ -3,7 +3,7 @@ package chapter2;
 import java.util.Scanner;
 
 /**
-* @Description: 乘积小于k的数组，本地位于书中第21页。思路：本题的关键在于：每当 right 右移后，新增的结果数是 right - left + 1。right 右移一次后。新增的结果数是在之前已经计算过的连续数组增加一个新数后新增的结果数。
+* @Description: 乘积小于k的数组的数量，本地位于书中第21页。思路：本题的关键在于：每当 right 右移后，新增的结果数是 right - left + 1。right 右移一次后。新增的结果数是在之前已经计算过的连续数组增加一个新数后新增的结果数。
 * @Author: Stone
 * @Date: 2023/8/29
 */
