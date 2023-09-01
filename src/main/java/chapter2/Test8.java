@@ -3,7 +3,7 @@ package chapter2;
 import java.util.Scanner;
 
 /**
-* @Description: 和大于或等于k的最短子数组
+* @Description: 和大于或等于k的最短子数组，该题位于书中第18页
 * @Author: Stone
 * @Date: 2023/8/26
 */
@@ -40,7 +40,7 @@ public class Test8 {
                     sum -= paramArray[left++];
                 }
                 int temp = right - left + 2;
-                result = temp < result ? temp : result;
+                result = Math.min(temp, result);
             }
         }
         return result == Integer.MAX_VALUE ? 0 : result;
