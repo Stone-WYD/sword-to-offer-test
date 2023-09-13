@@ -59,7 +59,8 @@ public class Test7 {
                 result.add(Arrays.asList(nums[i], nums[m], nums[n]));
                 // 去重
                 while (nums[m] == nums[++m]){
-                    n--;
+                }
+                while (nums[n] == nums[--n]){
                 }
             } else {
                 if (nums[m] + nums[n] + nums[i] < 0){

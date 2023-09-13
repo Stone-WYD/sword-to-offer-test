@@ -3,7 +3,7 @@ package chapter2;
 import java.util.Scanner;
 
 /**
-* @Description: 和大于或等于k的最短子数组，该题位于书中第18页
+* @Description: 和大于或等于k的最短子数组，数组为正数数组，该题位于书中第18页
 * @Author: Stone
 * @Date: 2023/8/26
 */
