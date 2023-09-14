@@ -32,9 +32,9 @@ public class Test1 {
             // 唯一可能会溢出的情况，返回最大值
             return Integer.MAX_VALUE;
         }
-        if ( dividend == Integer.MIN_VALUE && divisor == 1 ){
-            // 这种情况没法把 dividend 取反当正数
-            return Integer.MIN_VALUE;
+        if ( dividend == Integer.MIN_VALUE || divisor == Integer.MIN_VALUE){
+            // 这种情况不计算
+            return 404;
         }
         if (dividend == 0) return 0;
         // 结果是否取反的标志
@@ -57,12 +57,45 @@ public class Test1 {
         while (dividend >= divisor ){
             int quotient = 1;
             int value = divisor;
-            while( value < Integer.MAX_VALUE && dividend >= value + value ){
+            while(value < Integer.MAX_VALUE && dividend >= value + value){
                 value += value;
                 quotient += quotient;
             }
             dividend -= value;
             result += quotient;
+        }
+        return result;
+    }
+
+    public static int divide2(int dividend, int divisor){
+        // 这种情况会溢出，按照题意返回最大整数值
+        if (dividend == Integer.MIN_VALUE && divisor == -1){
+            return Integer.MAX_VALUE;
+        }
+        int reverFlag = 0;
+        if (dividend > 0) {
+            dividend = -dividend;
+            reverFlag++;
+        }
+        if (divisor > 0 ){
+            divisor = -divisor;
+            reverFlag++;
+        }
+        int result = divideCore2(dividend, divisor);
+        return (reverFlag & 1) == 0 ? result : -result;
+    }
+
+    private static int divideCore2(int dividend, int divisor){
+        int result = 0;
+        while (dividend < divisor) {
+            int tempResult = 1;
+            int value = divisor;
+            while (dividend < value + value && value > Integer.MIN_VALUE){
+                value += value;
+                tempResult += tempResult;
+            }
+            dividend -= value;
+            result += tempResult;
         }
         return result;
     }
