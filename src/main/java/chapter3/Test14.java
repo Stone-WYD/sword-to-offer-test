@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * @program: sword-to-offer-test
- * @description: 字符串中的变位词，大意：判断一个字符串中是否包含另一个字符串的某个变位词
+ * @description: 字符串中的变位词，大意：判断一个字符串中是否包含另一个字符串的某个变位词，本题位于书中第 31 页
  * @author: Stone
  * @create: 2023-09-26 09:37
  **/

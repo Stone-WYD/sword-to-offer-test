@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * @program: sword-to-offer-test
- * @description: 字符串中的所有变位词
+ * @description: 字符串中的所有变位词，本题位于书中第 35 页
  * @author: Stone
  * @create: 2023-09-26 13:43
  **/
