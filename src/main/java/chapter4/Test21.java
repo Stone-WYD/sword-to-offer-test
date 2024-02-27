@@ -46,6 +46,7 @@ public class Test21 {
             }
         }
         // 删除 cur2 指向的节点
+        assert cur2Last != null;
         cur2Last.next = cur2.next;
         return listNode;
     }

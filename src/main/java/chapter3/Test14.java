@@ -44,7 +44,7 @@ public class Test14 {
         // 遍历第二个字符串
         int left = 0;
         int right = firStrLength - 1;
-        for (; right < secStrLength - 1;) {
+        while (right < secStrLength - 1) {
             result[secCharArray[left] - 'a'] += 1;
             right++;
             left++;

@@ -40,8 +40,8 @@ public class Test10 {
         // 和为 k 的次数
         Integer count = 0;
         Integer sum = 0;
-        for (int i = 0; i < paramArray.length; i++) {
-            sum += paramArray[i];
+        for (int j : paramArray) {
+            sum += j;
             count += sumToCount.getOrDefault(sum - k, 0);
             sumToCount.put(sum, sumToCount.getOrDefault(sum, 0) + 1);
         }

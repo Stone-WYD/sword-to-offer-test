@@ -27,7 +27,7 @@ public class Test16 {
 
     // 解法 1：使用hash法和双指针法解，但需要遍历多遍hash表
     private static Integer lengthOfLongestSubstring(String inputStr) {
-        if (inputStr.length() == 0) {
+        if (inputStr.isEmpty()) {
             return 0;
         }
         int[] counts = new int[256];
@@ -47,7 +47,7 @@ public class Test16 {
 
     // 解法 2：优化解法 1 需要遍历 hash 表的缺点
     private static Integer lengthOfLongestSubstring2(String inputStr) {
-        if (inputStr.length() == 0) {
+        if (inputStr.isEmpty()) {
             return 0;
         }
         int[] counts = new int[256];
