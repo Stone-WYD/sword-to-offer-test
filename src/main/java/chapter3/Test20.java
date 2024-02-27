@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * @program: sword-to-offer-test
- * @description: 给定一个字符串，请问该字符串中有多少个回文连续子字符串
+ * @description: 给定一个字符串，请问该字符串中有多少个回文连续子字符串，本题位于书中第 44 页
  * @author: Stone
  * @create: 2024-02-23 10:46
  **/

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * @program: sword-to-offer-test
- * @description: 链表中环的入口节点
+ * @description: 链表中环的入口节点，本题位于书中第 52 页
  * @author: Stone
  * @create: 2024-02-27 14:51
  **/

@@ -7,7 +7,7 @@ import static chapter4.ListNode.stringToListNode;
 
 /**
  * @program: sword-to-offer-test
- * @description: 删除倒数第 k 个节点
+ * @description: 删除倒数第 k 个节点，本题位于书中第 50 页
  * @author: Stone
  * @create: 2024-02-27 13:59
  **/
