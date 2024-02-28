@@ -58,7 +58,7 @@ public class Test24 {
         return head;
     }*/
 
-    private static ListNode reverseList(ListNode head) {
+    public static ListNode reverseList(ListNode head) {
 
         // 只有哨兵节点时直接返回
         if (head.next == null) return head;

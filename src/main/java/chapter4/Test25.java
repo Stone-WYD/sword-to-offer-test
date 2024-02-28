@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import static chapter4.ListNode.listNodeToString;
 import static chapter4.ListNode.stringToListNode;
+import static chapter4.Test24.reverseList;
 
 /**
  * @program: sword-to-offer-test
@@ -65,7 +66,7 @@ public class Test25 {
         return reverseList(result);
     }
 
-    private static ListNode reverseList(ListNode head) {
+    /*public static ListNode reverseList(ListNode head) {
 
         // 只有哨兵节点时直接返回
         if (head.next == null) return head;
@@ -82,6 +83,6 @@ public class Test25 {
         }
         head.next = cur1;
         return head;
-    }
+    }*/
 }
 
