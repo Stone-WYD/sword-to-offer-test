@@ -54,8 +54,10 @@ public class Test28 {
                     childCur = childCur.next;
                 }
                 // 4. childCur 指向最后一个节点
-                childCur.next = next;
-                next.pre = childCur;
+                if (next != null) {
+                    childCur.next = next;
+                    next.pre = childCur;
+                }
                 // 5. 指向下一个节点
                 cur = next;
                 continue;
