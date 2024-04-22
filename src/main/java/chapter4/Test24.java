@@ -26,7 +26,7 @@ public class Test24 {
         }
     }
 
-    private static ListNode reverseList(ListNode head) {
+    /*private static ListNode reverseList(ListNode head) {
         // 默认有哨兵节点，如果链表没有节点或者只有一个节点
         if (head.next == null || head.next.next == null) return head;
         // 如果有两个个节点，则交换位置
@@ -56,6 +56,24 @@ public class Test24 {
         p2.next = p1;
         head.next = p2;
         return head;
-    }
+    }*/
 
+    public static ListNode reverseList(ListNode head) {
+
+        // 只有哨兵节点时直接返回
+        if (head.next == null) return head;
+
+        ListNode cur1 = head.next;
+        ListNode cur2 = cur1.next;
+
+        cur1.next = null;
+        while (cur2 != null) {
+            ListNode tmp = cur2.next;
+            cur2.next = cur1;
+            cur1 = cur2;
+            cur2 = tmp;
+        }
+        head.next = cur1;
+        return head;
+    }
 }
