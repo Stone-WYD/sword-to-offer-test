@@ -20,7 +20,7 @@ public class Test11 {
             int[] paramArray = new int[inArray.length];
             for (int i = 0; i < inArray.length; i++) paramArray[i] = Integer.parseInt(inArray[i]);
 
-            Integer result = findMaxLength(paramArray);
+            Integer result = findMaxLength2(paramArray);
             System.out.println("得到的结果为：" + result);
 
             System.out.print("此时输入 'exit' 可结束程序：");
@@ -43,5 +43,27 @@ public class Test11 {
             }
         }
         return result;
+    }
+
+    private static int findMaxLength2(int[] nums) {
+        HashMap<Integer, Integer> sumAndIndex = new HashMap<>();
+        // sumAndIndex.put(0, -1);
+        int sum = 0;
+        int maxLength = 0;
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i] == 0 ? -1 : 1;
+            if (sum == 0) {
+                maxLength = i + 1;
+            } else {
+                if (sumAndIndex.containsKey(sum)) {
+                    // 不会再更新 key 为 sum 的 value，因为坐标要放最小的
+                    // -1 1 1 1 -1 -1
+                    maxLength = Math.max(maxLength, i - sumAndIndex.get(sum));
+                } else {
+                    sumAndIndex.put(sum, i);
+                }
+            }
+        }
+        return maxLength;
     }
 }

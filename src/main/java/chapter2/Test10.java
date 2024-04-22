@@ -23,7 +23,7 @@ public class Test10 {
             System.out.print("请输入一个整数：");
             Integer k = scanner.nextInt();
 
-            Integer result = subarraySum(paramArray, k);
+            Integer result = subarraySum2(paramArray, k);
             System.out.println("得到的结果为：" + result);
 
             System.out.print("此时输入 'exit' 可结束程序：");
@@ -43,6 +43,23 @@ public class Test10 {
         for (int j : paramArray) {
             sum += j;
             count += sumToCount.getOrDefault(sum - k, 0);
+            sumToCount.put(sum, sumToCount.getOrDefault(sum, 0) + 1);
+        }
+        return count;
+    }
+
+    private static Integer subarraySum2(int[] paramArray, Integer k) {
+        Map<Integer, Integer> sumToCount = new HashMap<>();
+        // 和为 k 的次数
+        Integer count = 0;
+        Integer sum = 0;
+        for (int j : paramArray) {
+            sum += j;
+            if (sum == k) {
+                count += sumToCount.getOrDefault(0, 1);
+            } else {
+                count += sumToCount.getOrDefault(sum - k, 0);
+            }
             sumToCount.put(sum, sumToCount.getOrDefault(sum, 0) + 1);
         }
         return count;
