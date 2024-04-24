@@ -16,7 +16,7 @@ import static chapter7.Test42.*;
 /**
  * 二叉树的右侧视图，二叉树从上向下看到的数组
  * */
-public class Test55 {
+public class Test46 {
 
     public static List<Integer> rightSideView(TreeNode root) {
         List<Integer> result = new ArrayList<>();
