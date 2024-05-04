@@ -6,7 +6,6 @@ package chapter7;
  * @create: 2024-04-24 15:35
  */
 
-import sun.reflect.generics.tree.Tree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -60,10 +59,8 @@ public class Test42 {
 
     public static class TreeNode {
 
-        public TreeNode(int val, TreeNode leftNode, TreeNode rightNode) {
+        public TreeNode(int val) {
             this.val = val;
-            this.leftNode = leftNode;
-            this.rightNode = rightNode;
         }
 
         public int val;
